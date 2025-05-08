@@ -10,9 +10,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Modern Hero Site",
-  description: "A modern site with multiple sections and language support",
-    generator: 'v0.dev'
+  title: "Rojas Consultancy & Inspections Group",
+  description: "Professional consultancy and inspection services",
 }
 
 export default function RootLayout({

@@ -12,26 +12,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-xl font-bold">HERO</h3>
-            <p className="mb-4">{t("footer.description")}</p>
-            <div className="flex space-x-4">
-              <Link href="#" className="hover:text-primary">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="hover:text-primary">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="hover:text-primary">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="hover:text-primary">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </div>
+            <h3 className="mb-4 text-xl font-bold">Rojas Consultancy & Inspections Group</h3>
+            <p className="text-gray-600 mb-6">Building the future together</p>
+            <div className="w-full max-w-[280px] h-1 bg-[var(--secondary-bg-color)]"></div>
           </div>
 
           <div>
@@ -70,15 +53,15 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-primary" />
-                <span>+1 (123) 456-7890</span>
+                <span>+7 (930) 3388 124</span>
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-primary" />
-                <span>info@herocompany.com</span>
+                <span>sales@rggca.cn</span>
               </li>
               <li className="flex items-center">
                 <MapPin size={16} className="mr-2 text-primary" />
-                <span>123 Hero Street, City, Country</span>
+                <span>Sherbinka District, Moscow Russia</span>
               </li>
             </ul>
           </div>
@@ -107,7 +90,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-primary pt-8 text-center">
           <p>
-            &copy; {new Date().getFullYear()} HERO. {t("all_rights_reserved")}
+            &copy; {new Date().getFullYear()} Rojas Consultancy & Inspections Group. {t("all_rights_reserved")}
           </p>
         </div>
       </div>
