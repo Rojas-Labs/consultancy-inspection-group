@@ -12,6 +12,16 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Rojas Consultancy & Inspections Group",
   description: "Professional consultancy and inspection services",
+  icons: {
+    icon: [
+      { url: '/logo-tr-black-bg.png', sizes: '512x512', type: 'image/png' },
+      { url: '/logo-tr-black-bg.png', sizes: '1024x1024', type: 'image/png' }
+    ],
+    shortcut: '/logo-tr-black-bg.png',
+    apple: [
+      { url: '/logo-tr-black-bg.png', sizes: '512x512', type: 'image/png' }
+    ],
+  },
 }
 
 export default function RootLayout({

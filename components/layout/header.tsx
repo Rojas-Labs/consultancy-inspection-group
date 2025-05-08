@@ -7,6 +7,7 @@ import LanguageToggle from "./language-toggle"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import Image from "next/image"
 
 export default function Header() {
   const { t } = useLanguage()
@@ -33,8 +34,15 @@ export default function Header() {
       className={`sticky top-0 z-50 w-full transition-all duration-300 bg-black`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="#hero" className="hidden md:block text-2xl font-bold text-white">
-          Rojas Consultancy & Inspections Group
+        <Link href="#hero" className="hidden md:flex items-center space-x-2 text-2xl font-bold text-white">
+          <Image
+            src="/logo-tr-bg.png"
+            alt="Rojas Consultancy Logo"
+            width={80}
+            height={80}
+            className="object-contain"
+          />
+          <span>Rojas Consultancy & Inspections Group</span>
         </Link>
 
         {/* Desktop Navigation */}
