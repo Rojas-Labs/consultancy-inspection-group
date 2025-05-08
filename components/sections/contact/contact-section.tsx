@@ -1,62 +1,60 @@
 "use client"
 
 import type React from "react"
-
 import { useLanguage } from "@/lib/language-context"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
-import { ChevronDown } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 export default function ContactSection() {
   const { t } = useLanguage()
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted")
-  }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(entry.target)
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px"
+      }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
 
   return (
-    <section id="contact" className="relative py-20 bg-primary chevron-animation">
+    <section ref={sectionRef} id="contact" className="relative py-20 bg-[var(--secondary-bg-color)]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 md:text-4xl lg:text-5xl">{t("contact_title")}</h2>
-          <p className="text-xl max-w-2xl mx-auto">{t("contact_subtitle")}</p>
+        <div className={`text-center mb-16 transition-all duration-1000 transform ${
+          isVisible 
+            ? "translate-y-0 opacity-100" 
+            : "translate-y-10 opacity-0"
+        }`}>
+          <h2 className="text-4xl font-black tracking-tight mb-4 md:text-5xl lg:text-7xl uppercase">
+            <span className="text-[var(--secondary-bg-color)] [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">READY TO START YOUR</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-transparent to-transparent [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]"> PROJECT</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-transparent to-transparent [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">?</span>
+          </h2>
+          <Button 
+            variant="outline" 
+            className="mt-8 border-2 border-white text-white hover:bg-white hover:text-black transition-colors duration-300 text-lg px-8 py-6"
+          >
+            Get in touch
+          </Button>
         </div>
-
-        <Card className="max-w-2xl mx-auto border-none shadow-xl">
-          <CardContent className="p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input placeholder={t("your_name")} className="border-primary/30 focus-visible:ring-primary" required />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder={t("your_email")}
-                  className="border-primary/30 focus-visible:ring-primary"
-                  required
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder={t("your_message")}
-                  className="min-h-32 border-primary/30 focus-visible:ring-primary"
-                  required
-                />
-              </div>
-              <Button type="submit" className="w-full bg-secondary text-white hover:bg-secondary/90">
-                {t("send_message")}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="h-10 w-10 text-secondary" />
       </div>
     </section>
   )

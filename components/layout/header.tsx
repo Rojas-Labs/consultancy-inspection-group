@@ -30,9 +30,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-secondary shadow-md" : "bg-secondary"
-      }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 bg-black`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-bold text-white">

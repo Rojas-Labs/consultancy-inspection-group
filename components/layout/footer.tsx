@@ -8,7 +8,7 @@ export default function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="bg-secondary text-white">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
           <div>
@@ -38,27 +38,27 @@ export default function Footer() {
             <h3 className="mb-4 text-xl font-bold">{t("navigation")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#hero" className="link-with-chevron hover:text-primary">
+                <Link href="#hero" className="hover:text-primary">
                   {t("home")}
                 </Link>
               </li>
               <li>
-                <Link href="#team" className="link-with-chevron hover:text-primary">
+                <Link href="#team" className="hover:text-primary">
                   {t("team")}
                 </Link>
               </li>
               <li>
-                <Link href="#machinery" className="link-with-chevron hover:text-primary">
+                <Link href="#machinery" className="hover:text-primary">
                   {t("machinery")}
                 </Link>
               </li>
               <li>
-                <Link href="#philosophy" className="link-with-chevron hover:text-primary">
+                <Link href="#philosophy" className="hover:text-primary">
                   {t("philosophy")}
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="link-with-chevron hover:text-primary">
+                <Link href="#contact" className="hover:text-primary">
                   {t("contact")}
                 </Link>
               </li>
@@ -87,17 +87,17 @@ export default function Footer() {
             <h3 className="mb-4 text-xl font-bold">{t("legal")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="link-with-chevron hover:text-primary">
+                <Link href="#" className="hover:text-primary">
                   {t("privacy_policy")}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="link-with-chevron hover:text-primary">
+                <Link href="#" className="hover:text-primary">
                   {t("terms_of_service")}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="link-with-chevron hover:text-primary">
+                <Link href="#" className="hover:text-primary">
                   {t("cookie_policy")}
                 </Link>
               </li>
