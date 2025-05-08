@@ -34,7 +34,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-start bg-primary chevron-animation">
+    <section id="hero" className="relative min-h-screen flex items-center justify-start bg-primary">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         {backgrounds.map((bg, index) => (
           <video
@@ -52,7 +52,7 @@ export default function HeroSection() {
         ))}
         <div className="absolute inset-0 bg-black/50" />
       </div>
-      <div className="container mx-auto px-4 py-24 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div
           className={`transition-all duration-1000 max-w-2xl ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -63,7 +63,7 @@ export default function HeroSection() {
               Complete <span className="text-[var(--secondary-bg-color)]">Consultancy</span> and <span className="text-[var(--secondary-bg-color)]">Inspections</span> Services
             </h1>
             <Button
-              className="border-2 border-white text-white hover:border-[var(--secondary-bg-color)] hover:text-[var(--secondary-bg-color)] transition-colors duration-300"
+              className="border-2 border-white text-white hover:border-[var(--secondary-bg-color)] hover:text-[var(--secondary-bg-color)] transition-colors duration-300 hover:bg-transparent"
               size="lg"
               onClick={() => {
                 document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })
@@ -75,8 +75,13 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="h-10 w-10 text-white" />
+      {/* Three Chevrons */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center -mb-24">
+        <div className="relative w-60 h-60">
+          <ChevronDown className="absolute h-60 w-60 text-[var(--secondary-bg-color)] animate-bounce" style={{ animationDelay: '0s' }} />
+          <ChevronDown className="absolute h-60 w-60 text-[var(--secondary-bg-color)] animate-bounce" style={{ animationDelay: '0s', transform: 'translateY(-20px)' }} />
+          <ChevronDown className="absolute h-60 w-60 text-[var(--secondary-bg-color)] animate-bounce" style={{ animationDelay: '0s', transform: 'translateY(-40px)' }} />
+        </div>
       </div>
     </section>
   )

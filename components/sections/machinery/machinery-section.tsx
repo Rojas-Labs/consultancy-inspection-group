@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/language-context"
 import MachineryCard from "./machinery-card"
+import AnimatedSection from "@/components/ui/animated-section"
 
 type MachineryItem = {
   id: number
@@ -53,7 +54,7 @@ export default function MachinerySection() {
   ]
 
   return (
-    <section id="machinery" className="py-20 bg-gray-50">
+    <AnimatedSection id="machinery" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 md:text-4xl lg:text-5xl">{t("machinery_title")}</h2>
@@ -66,6 +67,6 @@ export default function MachinerySection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }
