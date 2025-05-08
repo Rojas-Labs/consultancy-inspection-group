@@ -33,8 +33,8 @@ export default function Header() {
       className={`sticky top-0 z-50 w-full transition-all duration-300 bg-black`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="text-2xl font-bold text-white">
-          HERO
+        <Link href="#hero" className="text-2xl font-bold text-white">
+          Rojas Consultancy & Inspections Group
         </Link>
 
         {/* Desktop Navigation */}

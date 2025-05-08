@@ -58,17 +58,20 @@ export default function HeroSection() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">{t("hero_title")}</h1>
-          <p className="mb-8 text-xl text-white md:text-2xl">{t("hero_subtitle")}</p>
-          <Button
-            size="lg"
-            className="bg-secondary text-white hover:bg-secondary/90"
-            onClick={() => {
-              document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })
-            }}
-          >
-            {t("hero_cta")}
-          </Button>
+          <div className="relative z-10 max-w-3xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl uppercase">
+              Complete <span className="text-[var(--secondary-bg-color)]">Consultancy</span> and <span className="text-[var(--secondary-bg-color)]">Inspections</span> Services
+            </h1>
+            <Button
+              className="border-2 border-white text-white hover:border-[var(--secondary-bg-color)] hover:text-[var(--secondary-bg-color)] transition-colors duration-300"
+              size="lg"
+              onClick={() => {
+                document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })
+              }}
+            >
+              {t("hero_cta")}
+            </Button>
+          </div>
         </div>
       </div>
 
