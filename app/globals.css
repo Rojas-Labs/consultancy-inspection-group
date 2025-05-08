@@ -6,6 +6,7 @@
   --primary: #fdb927;
   --secondary: #000;
   --background: #fff;
+  --secondary-bg-color: #fdb927;
 }
 
 @layer base {
