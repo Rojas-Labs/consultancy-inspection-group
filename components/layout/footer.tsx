@@ -12,13 +12,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-xl font-bold">Rojas Consultancy & Inspections Group</h3>
-            <p className="text-gray-600 mb-6">Building the future together</p>
+            <h3 className="mb-4 text-xl font-bold">{t("footer.company_name")}</h3>
+            <p className="text-gray-600 mb-6">{t("footer.tagline")}</p>
             <div className="w-full max-w-[280px] h-1 bg-[var(--secondary-bg-color)]"></div>
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-bold">{t("navigation")}</h3>
+            <h3 className="mb-4 text-xl font-bold">{t("footer.navigation")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#hero" className="hover:text-primary">
@@ -27,29 +27,29 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#team" className="hover:text-primary">
-                  {t("team")}
+                  {t("team.title")}
                 </Link>
               </li>
               <li>
                 <Link href="#machinery" className="hover:text-primary">
-                  {t("machinery")}
+                  {t("machinery.title")}
                 </Link>
               </li>
               <li>
                 <Link href="#philosophy" className="hover:text-primary">
-                  {t("philosophy")}
+                  {t("philosophy.title")}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="hover:text-primary">
-                  {t("contact")}
+                  {t("contact.title")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-bold">{t("contact")}</h3>
+            <h3 className="mb-4 text-xl font-bold">{t("contact.title")}</h3>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-primary" />
@@ -67,21 +67,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-bold">{t("legal")}</h3>
+            <h3 className="mb-4 text-xl font-bold">{t("footer.legal")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="hover:text-primary">
-                  {t("privacy_policy")}
+                  {t("footer.privacy_policy")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary">
-                  {t("terms_of_service")}
+                  {t("footer.terms_of_service")}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary">
-                  {t("cookie_policy")}
+                  {t("footer.cookie_policy")}
                 </Link>
               </li>
             </ul>
@@ -90,7 +90,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-primary pt-8 text-center">
           <p>
-            &copy; {new Date().getFullYear()} Rojas Consultancy & Inspections Group. {t("all_rights_reserved")}
+            &copy; {new Date().getFullYear()} {t("footer.company_name")}. {t("footer.all_rights_reserved")}
           </p>
         </div>
       </div>

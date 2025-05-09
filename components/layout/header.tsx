@@ -23,10 +23,10 @@ export default function Header() {
 
   const navItems = [
     { name: t("home"), href: "#hero" },
-    { name: t("team"), href: "#team" },
-    { name: t("machinery"), href: "#machinery" },
-    { name: t("philosophy"), href: "#philosophy" },
-    { name: t("contact"), href: "#contact" },
+    { name: t("team.title"), href: "#team" },
+    { name: t("machinery.title"), href: "#machinery" },
+    { name: t("philosophy.title"), href: "#philosophy" },
+    { name: t("contact.title"), href: "#contact" },
   ]
 
   return (
@@ -51,7 +51,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="link-with-chevron text-white hover:text-primary transition-colors"
+              className="link-with-chevron text-white hover:text-primary transition-colors uppercase font-medium tracking-wide"
             >
               {item.name}
             </Link>
@@ -75,7 +75,7 @@ export default function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="link-with-chevron text-white hover:text-primary transition-colors"
+                    className="link-with-chevron text-white hover:text-primary transition-colors uppercase font-medium tracking-wide"
                   >
                     {item.name}
                   </Link>
