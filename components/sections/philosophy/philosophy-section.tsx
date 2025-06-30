@@ -11,26 +11,26 @@ export default function PhilosophySection() {
   const philosophyItems = [
     {
       id: 1,
-      title: "Translations",
-      description: "Bridging Cultures, Not Just Words. Our translation services go beyond linguistic accuracy—we prioritize cultural relevance and contextual clarity. By aligning language with local business norms, we ensure that your message resonates across borders, empowering confident and effective global communication.",
+      titleKey: "philosophy.items.translations.title",
+      descriptionKey: "philosophy.items.translations.description",
       icon: <Languages className="h-12 w-12 text-primary" />,
     },
     {
       id: 2,
-      title: "Legal Framework",
-      description: "Structure That Protects, Strategy That Enables. Our legal foundation is built on more than compliance—it's a strategic layer that safeguards your operations and anticipates challenges. We provide clear, enforceable structures that support your business growth while respecting international and local legal standards.",
+      titleKey: "philosophy.items.legal.title",
+      descriptionKey: "philosophy.items.legal.description",
       icon: <Scale className="h-12 w-12 text-primary" />,
     },
     {
       id: 3,
-      title: "Client Relationship",
-      description: "Partnerships Built on Insight and Integrity. We believe lasting relationships stem from genuine alignment with our clients' goals. Through proactive collaboration, radical transparency, and tailored solutions, we become an extension of your team—focused on your long-term success, not just short-term results.",
+      titleKey: "philosophy.items.client.title",
+      descriptionKey: "philosophy.items.client.description",
       icon: <Users className="h-12 w-12 text-primary" />,
     },
     {
       id: 4,
-      title: "Compliance",
-      description: "Ethics as a Core Operating System. Compliance is not a checkbox—it's our way of working. From supplier audits to delivery, we embed ethical practices and international standards into every layer of our service, giving you peace of mind and operational confidence in even the most complex environments.",
+      titleKey: "philosophy.items.compliance.title",
+      descriptionKey: "philosophy.items.compliance.description",
       icon: <Shield className="h-12 w-12 text-primary" />,
     },
   ]
@@ -39,9 +39,9 @@ export default function PhilosophySection() {
     <section id="philosophy" className="relative py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">{t("philosophy_title")}</h2>
+          <h2 className="text-4xl font-bold mb-4">{t("philosophy.title")}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t("philosophy_description")}
+            {t("philosophy.description")}
           </p>
         </div>
 
@@ -51,8 +51,8 @@ export default function PhilosophySection() {
               <CardContent className="p-6 flex flex-col items-center text-center md:flex-row md:text-left md:items-start">
                 <div className="mb-4 md:mb-0 md:mr-6">{item.icon}</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{t(item.titleKey)}</h3>
+                  <p className="text-gray-600">{t(item.descriptionKey)}</p>
                 </div>
               </CardContent>
             </Card>

@@ -1,0 +1,110 @@
+{
+  "home": "Home",
+  "language": {
+    "toggle": "Toggle Language",
+    "en": "English",
+    "zh": "Chinese",
+    "ru": "Russian"
+  },
+  "readyToStart": "READY TO START YOUR PROJECT?",
+  "hero": {
+    "title": {
+      "prefix": "Complete",
+      "consultancy": "Consultancy",
+      "and": "and",
+      "inspections": "Inspections",
+      "suffix": "Services"
+    },
+    "subtitle": "",
+    "cta": "Learn More"
+  },
+  "team": {
+    "title": "Team",
+    "subtitle": "Professionals with Years of Experience",
+    "description": "For over 10 years, Rojas Consultancy & Inspections Group has been a trusted partner in the Chinese market with a strong and growing presence in South America. We specialize in guiding clients through the entire procurement and supply chain process in China—from supplier compliance and factory audits to quality inspections and final delivery. Our team combines deep regional knowledge with international standards to ensure every step meets your expectations and business goals.",
+    "features": {
+      "translations": {
+        "title": "Translations",
+        "description": "Professional translation services to bridge language barriers"
+      },
+      "legal": {
+        "title": "Legal Framework",
+        "description": "Comprehensive legal support and compliance guidance"
+      },
+      "payment": {
+        "title": "Payment Solutions",
+        "description": "Secure and efficient payment processing options"
+      },
+      "schedule": {
+        "title": "On Schedule",
+        "description": "Timely delivery and project management"
+      }
+    }
+  },
+  "machinery": {
+    "title": "Machinery",
+    "subtitle": "Modern Equipment for Precise Inspections",
+    "items": {
+      "sinotruk": {
+        "title": "Sinotruk SITRAK G7S (Tractor)",
+        "description": "High-class tractor for long-distance transportation, equipped with a powerful diesel engine (up to 540 hp) and advanced safety systems. Designed for efficiency and driver comfort, perfect for heavy long-distance haulage."
+      },
+      "shacman": {
+        "title": "SHACMAN F3000 Dump Truck",
+        "description": "Robust dump truck built for heavy operations in construction and mining. Features a Weichai WP12.430E201 engine (430 hp), reinforced frame, and large body (7500×2300×1500 mm) for maximum load capacity."
+      },
+      "howo_mixer": {
+        "title": "HOWO Concrete Mixer",
+        "description": "Reliable concrete mixer on HOWO chassis, equipped with Weichai WP10.380E22 engine (380 hp). Features a 10 m³ drum and advanced hydraulic systems for stable and efficient on-site concrete mixing."
+      },
+      "xcmg": {
+        "title": "XCMG XCA1200 All-Terrain Crane",
+        "description": "Versatile 1200-ton all-terrain crane designed for wind turbine installation and maintenance (2.0-2.5 MW). Features a 7-section telescopic boom (18.5-102 m) and independent suspension for superior mobility."
+      },
+      "faw": {
+        "title": "FAW Jiefang J6P (Tractor)",
+        "description": "Heavy-duty tractor with Weichai WD615.38 engine (380 hp), known for durability and fuel efficiency. Features a comfortable sleeper cab and advanced braking systems, suitable for long-distance haulage."
+      }
+    }
+  },
+  "philosophy": {
+    "title": "Philosophy",
+    "description": "Quality, precision, and reliability in every inspection",
+    "items": {
+      "translations": {
+        "title": "Translations",
+        "description": "We connect cultures, not just words. Our translation services go beyond linguistic accuracy—we prioritize cultural relevance and contextual clarity. By aligning language with local business norms, we ensure your message resonates across borders, enabling confident and effective global communication."
+      },
+      "legal": {
+        "title": "Legal Framework",
+        "description": "A structure that protects, a strategy that ensures. Our legal framework is built on more than just compliance—it's a strategic layer that safeguards your operations and anticipates challenges. We provide clear, enforceable structures that support your business growth while respecting international and local legal standards."
+      },
+      "client": {
+        "title": "Client Relationships",
+        "description": "Partnerships built on understanding and integrity. We believe long-term relationships stem from genuine alignment with our clients' goals. Through active collaboration, complete transparency, and tailored solutions, we become an extension of your team—focused on your long-term success, not just short-term results."
+      },
+      "compliance": {
+        "title": "Compliance",
+        "description": "Ethics as the core operating system. Compliance isn't a checkbox—it's our way of working. From supplier audits to delivery, we embed ethical practices and international standards into every layer of our service, giving you peace of mind and operational confidence even in the most challenging conditions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with our team",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "company_name": "Rojas Consultancy & Inspections Group",
+    "tagline": "Building the future together",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "cookie_policy": "Cookie Policy",
+    "all_rights_reserved": "All rights reserved"
+  }
+} 

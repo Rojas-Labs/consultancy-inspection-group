@@ -12,7 +12,7 @@ const backgrounds = [
 ]
 
 export default function HeroSection() {
-  const { t } = useLanguage()
+  const { t, currentLanguage } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
   const [currentBg, setCurrentBg] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
@@ -32,6 +32,21 @@ export default function HeroSection() {
 
     return () => clearInterval(interval)
   }, [])
+
+  const renderTitle = () => {
+    if (currentLanguage === 'ru') {
+      return (
+        <>
+          {t("hero.title.prefix")} <span className="text-[var(--secondary-bg-color)]">{t("hero.title.consultancy")}</span> {t("hero.title.and")} <span className="text-[var(--secondary-bg-color)]">{t("hero.title.inspections")}</span> {t("hero.title.suffix")}
+        </>
+      )
+    }
+    return (
+      <>
+        {t("hero.title.prefix")} <span className="text-[var(--secondary-bg-color)]">{t("hero.title.consultancy")}</span> {t("hero.title.and")} <span className="text-[var(--secondary-bg-color)]">{t("hero.title.inspections")}</span> {t("hero.title.suffix")}
+      </>
+    )
+  }
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-start bg-primary">
@@ -60,8 +75,11 @@ export default function HeroSection() {
         >
           <div className="relative z-10 max-w-3xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl uppercase">
-              Complete <span className="text-[var(--secondary-bg-color)]">Consultancy</span> and <span className="text-[var(--secondary-bg-color)]">Inspections</span> Services
+              {renderTitle()}
             </h1>
+            <p className="mb-8 text-xl text-white">
+              {t("hero.subtitle")}
+            </p>
             <Button
               className="border-2 border-white text-white hover:border-[var(--secondary-bg-color)] hover:text-[var(--secondary-bg-color)] transition-colors duration-300 hover:bg-transparent"
               size="lg"
@@ -69,7 +87,7 @@ export default function HeroSection() {
                 document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })
               }}
             >
-              {t("hero_cta")}
+              {t("hero.cta")}
             </Button>
           </div>
         </div>
