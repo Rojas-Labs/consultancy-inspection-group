@@ -2,6 +2,7 @@
 # Update the [site] bucket path if your output directory is different (e.g., .next, out, dist)
 name = "my-v0-project"
 compatibility_date = "2024-06-01"
+compatibility_flags = ["nodejs_compat"]
 
 [site]
 bucket = ".next"
