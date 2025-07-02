@@ -4,6 +4,4 @@ name = "my-v0-project"
 compatibility_date = "2024-06-01"
 compatibility_flags = ["nodejs_compat"]
 
-[site]
-bucket = ".next"
-entry-point = "." 
+pages_build_output_dir = ".vercel/output/static" 
